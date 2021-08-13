@@ -17,3 +17,7 @@
 - "strings" :  to manipulate strings
 - "sync" :  to provide mutex while using goroutines and channels to avoid race condition
 - "golang.org/x/net/websocket" :  to start a socket to maintain a continuous connection to avoid wastage of time during sending requests and responses
+
+## How it works
+- The application reads the symbols from the URL and sends a connection request using a web socket to transfer data. The data is received using REST API calls.
+- In the case of currency/all, it reads the symbols from the config.json file and and decodes the data using a decoder and stores it in the struct and coollects the dat for those included symbols and sends to frontend. 
